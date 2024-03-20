@@ -4,3 +4,6 @@ Trabalho que será realizada na disciplina tópicos especiais em banco de dados 
 Links úteis: 
 https://kafka.apache.org/quickstart
 / https://kafka.js.org/docs/getting-started
+/ https://serpapi.com/google-scholar-api
+
+------------------------------------------------------
