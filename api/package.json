@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "^2.2.4"
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "serpapi": "^2.1.0"
   }
 }
