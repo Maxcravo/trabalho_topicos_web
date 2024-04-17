@@ -1,15 +1,18 @@
-const { Kafka } = require('kafkajs')
+const { Kafka, Partitioners } = require('kafkajs')
 
 const kafka = new Kafka({
 	clientId: 'my-app',
 	brokers: ['localhost:9092'],
 })
 
-const newKafkaProducer = () => kafka.producer();
+const newKafkaProducer = () => kafka.producer({ createPartitioner: Partitioners.DefaultPartitioner })
 
 const newKafkaConsumer = (groupId) => kafka.consumer({groupId});
 
+const admin = () => kafka.admin() 
+
 module.exports = {
+	admin,
 	newKafkaProducer,
 	newKafkaConsumer
 }
