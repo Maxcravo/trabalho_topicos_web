@@ -1,9 +1,23 @@
-const { newKafkaProducer, newKafkaConsumer, admin } = require('./kafkajsConfig.js');
+require('dotenv/config')
 
-const myProducer = newKafkaProducer();
+/* scholar api */
+const scholarFetcher = require('./scholarFetcher');
 
-const myConsumer = newKafkaConsumer('test-group');
-const myadmin = admin();
+async function test() {
+	const results = await scholarFetcher.fetchScholarAPI("deep learning");
+	// enviar pro producer etc
+	console.log(`results = ${JSON.stringify(results)}`);
+}
+
+test();
+
+/* KAFKA */
+// const { newKafkaProducer, newKafkaConsumer, admin } = require('./kafkajsConfig.js');
+
+// const myProducer = newKafkaProducer();
+
+// const myConsumer = newKafkaConsumer('test-group');
+// const myadmin = admin();
 
 // async function createArticleTopic() {
 //   await myProducer.connect();
@@ -33,17 +47,17 @@ const myadmin = admin();
 
 // readMessages()
 
-async function deleteTopics(topics) {
-  console.log("delete topics");
-  myadmin.connect()
-	await myadmin.listTopics()
+// async function deleteTopics(topics) {
+//   console.log("delete topics");
+//   myadmin.connect()
+// 	await myadmin.listTopics()
 
-	await myadmin.deleteTopics({
-		topics
-	})
-	await myadmin.listTopics()
+// 	await myadmin.deleteTopics({
+// 		topics
+// 	})
+// 	await myadmin.listTopics()
 
-	myadmin.disconnect()
-}
+// 	myadmin.disconnect()
+// }
 
-deleteTopics(["test-article"])
+// deleteTopics(["test-article"])
