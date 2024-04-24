@@ -25,3 +25,4 @@ $ ./bin/kafka-topics.sh --bootstrap-server=localhost:9092 --list
 // Detalhes de um tópico
 $ ./bin/kafka-topics.sh --bootstrap-server=localhost:9092 --describe --topic <nome-do-topico>
 ```
+![alt text](https://github.com/[Maxcravo]/[trabalho_topicos_web]/blob/[main]/KafkaArquitetura.png?raw=true)
