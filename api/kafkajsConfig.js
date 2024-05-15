@@ -1,9 +1,9 @@
 const { Kafka, Partitioners } = require('kafkajs')
 
-const kafka = new Kafka({
-	clientId: 'my-app',
-	brokers: ['localhost:9092'],
-})
+// const kafka = new Kafka({
+// 	clientId: 'my-app',
+// 	brokers: ['localhost:9092'],
+// })
 
 const newKafkaProducer = () => kafka.producer({ createPartitioner: Partitioners.DefaultPartitioner })
 
