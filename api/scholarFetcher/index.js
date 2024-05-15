@@ -1,5 +1,10 @@
 const scholarService = require('./scholarService');
 
+/** Fetch Scholar API
+ * @name fetchScholarAPI
+ * @param {String} query 
+ * @returns {Array<String>}
+ */
 async function fetchScholarAPI(query) {
 	try {
 		const queryResult = await scholarService.fetchAPI(query);
