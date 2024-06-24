@@ -1,4 +1,5 @@
 require('dotenv/config');
+const scholarFetcher = require("./scholarFetcher")
 
 const { newKafkaConsumer, newKafkaProducer, admin } = require('./kafkajsConfig');
 
