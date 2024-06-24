@@ -5,7 +5,7 @@ const { newKafkaConsumer, newKafkaProducer, admin } = require('./kafkajsConfig')
 
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(express.json());
 
@@ -89,9 +89,9 @@ async function consumerInit() {
 }
 
 async function test(){
-	// await adminInit();
+	await adminInit();
 	await producerInit();
-	await consumerInit();
+	// await consumerInit();
 
 	await admin.connect();
 	console.log(`topicMeta = ${JSON.stringify(await admin.fetchTopicMetadata({ topics: ['test.topic2']}))}`);
