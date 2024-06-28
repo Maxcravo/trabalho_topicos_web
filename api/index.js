@@ -5,13 +5,15 @@ const { newKafkaConsumer, newKafkaProducer, admin } = require('./kafkajsConfig')
 
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(express.json());
 
 app.get('/', (req, res) => {
-	res.write("Heloo Kafka");
-	res.end();
+	console.log("cheguei aqui");
+	res.send({
+		teste: "ok"
+	})
 });
 
 async function adminInit() {
@@ -89,7 +91,7 @@ async function consumerInit() {
 }
 
 async function test(){
-	await adminInit();
+	// await adminInit();
 	await producerInit();
 	// await consumerInit();
 
@@ -111,6 +113,6 @@ test();
 
 // test();
 
-app.listen(port, () => {
-	console.log(`listening on port ${port}`);
+app.listen(3000, () => {
+	console.log(`listening on port 3000`);
 });

@@ -1,7 +1,8 @@
-const { Kafka, Partitioners } = require('kafkajs');
+const { Kafka, Partitioners, logLevel } = require('kafkajs');
 
 const kafka = new Kafka({
 	clientId: 'my-app',
+	logLevel: logLevel.DEBUG,
 	brokers: ['localhost:9092'],
 	retry: {
     initialRetryTime: 100,
