@@ -1,3 +1,4 @@
 api/node_modules/
-api/.env
 kafkaClient/node_modules/
+scholarFetcher/node_modules
+.env

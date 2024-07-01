@@ -1,22 +1,12 @@
-const scholarService = require('./scholarService');
+require("dotenv").config()
+console.log(process.env);
 
-/** Fetch Scholar API
- * @name fetchScholarAPI
- * @param {String} query 
- * @returns {Array<String>}
- */
-async function fetchScholarAPI(query) {
-	try {
-		const queryResult = await scholarService.fetchAPI(query);
-		console.log(`queryResult = ${JSON.stringify(queryResult)}`);
+const scholarControllers = require('./scholarControllers');
 
-		return queryResult;
+const express = require('express');
+const app = express();
 
-	} catch (error) {
-		console.log(`error = ${JSON.stringify(error)}`);
-	}
-} 
+app.use(express.json());
+app.post('/', scholarControllers.fetchScholarAPI);
 
-module.exports = {
-	fetchScholarAPI
-}
+app.listen(3001, () => console.log('Listening on http://localhost:3001'));
