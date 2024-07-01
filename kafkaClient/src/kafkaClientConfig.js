@@ -10,4 +10,4 @@ const kafkaClient = new Kafka({
   }
 })
 
-module.exports = kafkaClient
+exports.kafkaAdmin = kafkaClient.admin();
