@@ -1,7 +1,7 @@
 {
-  "name": "runkafka",
+  "name": "kafkaClient",
   "version": "1.0.0",
-  "description": "",
+  "description": "When you're ready, start your application by running: `docker compose up --build`.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "kafkajs": "^2.2.4"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }

@@ -1,4 +1,6 @@
+.env
 api/node_modules/
 kafkaClient/node_modules/
 scholarFetcher/node_modules
-.env
+kafkaProducer/node_modules/
+kafkaConsumer/node_modules/
