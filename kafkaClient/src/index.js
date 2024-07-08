@@ -6,11 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-	res.send({ teste: 'ok'});
-});
-
-app.get("./topics", kafkaController.listTopics)
+app.get("/topics", kafkaController.listTopics)
 app.post('/topics', kafkaController.createTopics)
 app.delete("/topics", kafkaController.deleteTopics)
 

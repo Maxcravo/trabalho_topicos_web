@@ -35,7 +35,6 @@ exports.createTopics = async (req, res) => {
   }
 }
 
-
 exports.deleteTopics = async (req, res) => {
 	console.log('[deleteTopics]');
 
