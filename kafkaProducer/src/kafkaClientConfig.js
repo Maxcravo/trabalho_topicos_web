@@ -10,7 +10,9 @@ const kafkaClient = new Kafka({
   }
 })
 
-export const newKafkaProducer = () => kafkaClient.producer({ 
+const newKafkaProducer = () => kafkaClient.producer({ 
 	createPartitioner: Partitioners.DefaultPartitioner,
 	allowAutoTopicCreation: true 
 });
+
+module.exports = {newKafkaProducer}

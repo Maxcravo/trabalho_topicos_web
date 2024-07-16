@@ -10,7 +10,9 @@ const kafkaClient = new Kafka({
   }
 })
 
-export const newKafkaConsumer = (groupId) => kafkaClient.consumer({ 
+const newKafkaConsumer = (groupId) => kafkaClient.consumer({ 
 	groupId,
 	allowAutoTopicCreation: false
 });
+
+module.exports = {newKafkaConsumer}
