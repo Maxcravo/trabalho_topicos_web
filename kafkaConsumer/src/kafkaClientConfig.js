@@ -1,9 +1,12 @@
 const { Kafka, Partitioners, logLevel } = require('kafkajs');
+require("dotenv").config({path: "../.env"})
+const hostIp = process.env.HOST_IP 
+console.log(hostIp);
 
 const kafkaClient = new Kafka({
 	clientId: 'my-app',
 	logLevel: logLevel.DEBUG,
-	brokers: ['maxsistem:9092'],
+	brokers: [`${hostIp}:9092`],
 	retry: {
     initialRetryTime: 100,
     retries: 5

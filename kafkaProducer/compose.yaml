@@ -1,0 +1,10 @@
+services:
+  server:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3002:3002
+    env_file:
+      - path: ../.env

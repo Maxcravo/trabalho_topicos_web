@@ -1,6 +1,7 @@
 const { Kafka, logLevel } = require('kafkajs');
-require("dotenv").config()
+
 const hostIp = process.env.HOST_IP 
+console.log('hostIp: ', hostIp);
 
 const kafkaClient = new Kafka({
 	clientId: 'my-app',

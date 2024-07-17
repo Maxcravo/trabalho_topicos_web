@@ -1,3 +1,5 @@
+require("dotenv").config() //TODO Resolver esse erro
+console.log(`process.env:`,process.env);
 require('./kafkaClientConfig');
 const kafkaController = require('./controllers');
 
