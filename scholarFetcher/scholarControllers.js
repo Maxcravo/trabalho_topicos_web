@@ -1,7 +1,6 @@
 require("dotenv").config()
 
-// const api_key = process.env.SERPAPI_KEY;
-const api_key = '417f6d82a3fa9c4ea46149776a73677e7f4af222f92a76e5ba66ce0c896e8bd4';
+const api_key = process.env.SERPAPI_KEY;
 // console.log('api_key: ', api_key);
 
 const { getJson } = require("serpapi");
