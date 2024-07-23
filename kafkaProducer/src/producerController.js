@@ -4,11 +4,23 @@ exports.produceMessages = async (req, res) => {
   console.log('[KafkaProducer] [produceMessages]');
 
   try {
-		const { topic, messages } = req.body;
+		const { topic, data } = req.body;
 
-		if(!topic || !messages || messages.length === 0) {
-			throw new Error('!topic || !messages');
+		console.log('[KafkaProducer] [produceMessages] { topic, data }: ', { topic, data });
+
+		if(!topic || !data || data.length === 0) {
+			throw new Error('!topic || !data');
 		}
+
+		// formatar os dados em forma de mensagem kafka
+		const messages = data.map((result, index) => {
+			return {
+				key: index, // Todo: ver se precisa ser string
+				value: result
+			}
+		});
+
+		console.log('[KafkaProducer] [produceMessages] messages: ', messages);
 
 		const kafkaProducer = newKafkaProducer();
 
