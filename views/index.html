@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scholar Fetcher | Rural</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="./script.js"></script>
 </head>
+
 <body>
   <main>
     <h1>Scholar Fetcher  Rural</h1>
@@ -18,12 +20,10 @@
     </div> 
 
     <div class="inputs" >
-      <form action="http://localhost:3001/" method="post">
-      <input placeholder="Quantidade de resultados " type="number" name="" id="">
-      <input placeholder="Query de busca" type="text" name="" id="">
+      <input placeholder="Quantidade de resultados " type="number" name="" id="query_quantity">
+      <input placeholder="Query de busca" type="text" name="" id="query_text">
     </div>
-    <button type="submit">realizar pesquisa</button>
-  </form>
+    <button onclick="sendData()" id="submit_button">realizar pesquisa</button>
 
   <div class="about">
     <h3>Sobre Nós</h3>
@@ -32,7 +32,5 @@
     </p>
 </div>
 </main>
-
-
 </body>
 </html>
