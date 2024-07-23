@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.center_div{
+  width: 65%;
+  margin-bottom: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center_div p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.inputs{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+
+.inputs input {
+  width: 200px;
+}
+
+.about {
+  margin-top: 3%;
+  width: 50%;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
