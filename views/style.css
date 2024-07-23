@@ -1,3 +1,11 @@
+h1, h3, p{
+  color: white;
+}
+
+body{
+  background-color: #1b1b1bec;
+}
+
 main {
   display: flex;
   flex-direction: column;
