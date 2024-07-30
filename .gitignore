@@ -5,5 +5,3 @@ scholarFetcher/node_modules
 kafkaProducer/node_modules/
 kafkaConsumer/node_modules/
 kafkaClient/compose.yaml
-
-test.js
