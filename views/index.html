@@ -5,32 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scholar Fetcher | Rural</title>
   <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="./script.js"></script>
+  <base href="../">
 </head>
-
 <body>
   <main>
-    <h1>Scholar Fetcher  Rural</h1>
-    <div class="center_div" >
-      <img src="../assets/logo.png" width="200px" alt="">
-      <p> Abaixo na <i>Query de busca </i> digite sua pesquisa de artigos científicos ao lado em <i>Quantidade de resultados</i>
-        Digite o número de artigos que quer receber dessa busca. Será processada e retornará um pdf com os artigos relacionado a query digitada e suas 
-        respectivas datas de criação.  
+      <h1>Scholar Fetcher  Rural</h1>
+      <div class="center_div" >
+        <img src="../assets/logo.png" width="200px" alt="">
+        <p> Abaixo na <i>Query de busca </i> digite sua pesquisa de artigos científicos ao lado em <i>Quantidade de resultados</i>
+          Digite o número de artigos que quer receber dessa busca. Será processada e retornará um pdf com os artigos relacionado a query digitada e suas 
+          respectivas datas de criação.  
+        </p>
+      </div> 
+
+      <div class="inputs" >
+        <input required placeholder="Query de busca" type="text" name="" id="query_text">
+      </div>
+      <button id="submit_button">realizar pesquisa</button>
+
+    <div class="about">
+      <h3>Sobre Nós</h3>
+      <p>Scholar Fetcher é um projeto desenvolvido pelos alunos da UFRRJ do curso de sistemas de informação, Isabelle Rizzo e Max Felipe com o objetivo de 
+        aprender o funcionamento de container dockers e do kafka e como essas duas tecnologias podem trabalhar juntas.
       </p>
-    </div> 
-
-    <div class="inputs" >
-      <input placeholder="Quantidade de resultados " type="number" name="" id="query_quantity">
-      <input placeholder="Query de busca" type="text" name="" id="query_text">
     </div>
-    <button id="submit_button">realizar pesquisa</button>
+  </main>
+  <!-- <script>
 
-  <div class="about">
-    <h3>Sobre Nós</h3>
-    <p>Scholar Fetcher é um projeto desenvolvido pelos alunos da UFRRJ do curso de sistemas de informação, Isabelle Rizzo e Max Felipe com o objetivo de 
-      aprender o funcionamento de container dockers e do kafka e como essas duas tecnologias podem trabalhar juntas.
-    </p>
-</div>
-</main>
+  const query = document.getElementById("query_text");
+  query.addEventListener("change", ()=> {
+  // handleSearch(query)
+  console.log(query.value);
+})
+  </script> -->
+
+<script type="module" src="../handleSearch.js" ></script>
 </body>
 </html>
