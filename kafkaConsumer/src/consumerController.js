@@ -4,6 +4,7 @@ async function treatData(data) {
 	try {
 		console.log(`treatData`);
 		// TODO: tratar os dados
+
 	
 		return data;
 		
@@ -19,7 +20,7 @@ exports.consumeMessages = async (req, res) => {
 		const { topics, groupId } = req.body;
 
 		if (!topics || topics.length === 0) {
-			throw new Error('topic vazio')
+			throw new Error('topics vazio')
 		}
 
 		const treatedData = [];
