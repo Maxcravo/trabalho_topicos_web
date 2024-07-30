@@ -1,3 +1,6 @@
+const query_text = document.getElementById("query_text");
+const submit = document.querySelector("#submit_button");
+
 const scholarBaseURL = 'http://localhost:3001';
 const producerBaseURL = 'http://localhost:3002';
 const consumerBaseURL = 'http://localhost:3003';
@@ -65,3 +68,9 @@ async function handleSearch({ query, numberOfResults = 10 }) {
     alert(error);
   }
 }
+
+submit.addEventListener("click", ()=> {
+  handleSearch({query:query_text.value});
+  console.log(query_text.value);
+})
+
