@@ -12,10 +12,11 @@ const hds = new Headers({
 function createTopicName(srcString) {
   const clean = srcString.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '');
   const formatted = clean.trim().replace(/\s\s+/g, ' ').replace(/\s/g, '-').toLowerCase();
+  console.log("TopicName: ", formatted);
   return formatted;
 }
 
-async function handleSearch({ query, numberOfResults = 10 }) {
+async function handleSearch({ query }) {
   console.log('[handleSearch]');
   try {
     if(!query) {
@@ -24,15 +25,13 @@ async function handleSearch({ query, numberOfResults = 10 }) {
 
     console.log('[handleSearch] query: ', query);
 
-    const hds = new Headers({
-      'Content-type': 'application/json; charset=UTF-8',
-    })
-
     // acessar o serviço do scholar para fazer uma busca
     const scholarResponse = await fetch(`${scholarBaseURL}/search`, {
       method: 'POST',
-      body: JSON.stringify(query),
-      headers: hds
+      body: JSON.stringify({ query: query }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
     }).then((res) => {
       return res.json();
     });
@@ -48,30 +47,38 @@ async function handleSearch({ query, numberOfResults = 10 }) {
     const producerRes = await fetch(`${producerBaseURL}/produce-messages`, {
       method: 'POST',
       body: JSON.stringify({ topic: topicName, data: scholarResponse.result }),
-      headers: hds
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
     }).then((res) => {
-      return res.json();
+      if (res.status === 200) {
+        return res.json();
+      } else throw new Error('Erro ao produzir mensagens');
     });
 
     console.log('[handleSearch] producerRes: ', producerRes);
 
-    if (producerRes.status !== 200) {
-      throw new Error('Erro ao produzir mensagens');
-    }
-
-    await fetch(`${consumerBaseURL}/consume-messages`, {
+    const consumerResponse = await fetch(`${consumerBaseURL}/consume-messages`, {
       method: 'POST',
-      body: JSON.stringify({ topic: topicName }),
-      headers: hds
-    }) // todo: ver se aqui tem que retornar o res.json pq vai retornar o html
+      body: JSON.stringify({ topics: [topicName] }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8'
+      }
+    }).then((res) => {
+      console.log()
+      return res.json();
+    });
+
+    const resultsDiv = document.getElementById("results")
+    resultsDiv.innerHTML = consumerResponse.htmlContent;
     
   } catch (error) {
+    console.log("error-handleSearch: ", error);
     alert(error);
   }
 }
 
 submit.addEventListener("click", ()=> {
-  handleSearch({query:query_text.value});
-  console.log(query_text.value);
+  handleSearch({ query: query_text.value });
 })
 

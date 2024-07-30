@@ -15,8 +15,8 @@ exports.produceMessages = async (req, res) => {
 		// formatar os dados em forma de mensagem kafka
 		const messages = data.map((result, index) => {
 			return {
-				key: index, // Todo: ver se precisa ser string
-				value: result
+				// key: index, // Todo: ver se precisa ser string
+				value: JSON.stringify(result)
 			}
 		});
 

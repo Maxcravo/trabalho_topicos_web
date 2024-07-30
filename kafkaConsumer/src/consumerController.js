@@ -11,22 +11,26 @@ async function runAI(prompt) {
 	return response.text();
 } 
 
-async function treatData(data) {
+async function treatData(messageValue) {
 	try {
 		console.log(`treatData`);
+		console.log("messageValue: ", messageValue);
+		const result = JSON.parse(messageValue)
+		console.log("result: ", result);
+		
 		const formattedResult = {
-			title: data.value.title,
-			link: data.value.link,
-			citations: data.value.inline_link.cited_by.total ? data.value.inline_link.cited_by.total : 0,
+			title: result.title,
+			link: result.link,
+			citations: result?.inline_links?.cited_by?.total ? result?.inline_links?.cited_by?.total : 0,
 			keyWords: []
 		}
 
-		const getContentKeyWords = `Gere três palavras-chave com base nesses dois textos: "${data.value.title}" e "${data.value.snippet}. Retorne no formato ["palavra1", "palavra2", "palavra3"].`
+		const getContentKeyWords = `Gere três palavras-chave em Português-BR com base nesses dois textos: "${result.title}" e "${result.snippet}. Retorne no formato ["palavra1", "palavra2", "palavra3"].`
 
-		const aiResponse = runAI(getContentKeyWords);
-		console.log('aiResponse: ', aiResponse);
-
-		formattedResult.keyWords = aiResponse;
+		const aiResponse = await runAI(getContentKeyWords);
+		
+		formattedResult.keyWords = JSON.parse(aiResponse);
+		console.log('formattedResult.keyWords[0]: ', formattedResult.keyWords[0]);
 	
 		return formattedResult;
 		
@@ -57,8 +61,8 @@ exports.consumeMessages = async (req, res) => {
 		console.log(`consumer run`);
 		await kafkaConsumer.run({
 			eachMessage: async ({ topic, partition, message, heartbeat, pause }) => {
-				console.log(`messageValue: `, message.value.toString());
-				const treated = await treatData(message);
+				// console.log(`messageValue: `, message.value.toString());
+				const treated = await treatData(message.value.toString());
 				treatedData.push(treated);
 				},
 		})
@@ -74,19 +78,21 @@ exports.consumeMessages = async (req, res) => {
 		const htmlContent = `
 			<ul style="display:flex; flex-direction: collumn"> 
 				${treatedData.map((data)=>{
-					return (
+					return (`
 						<li style="display:flex; flex-direction: collumn" >
 							<h1>Titulo: ${data.title} </h1>
 							<p>link: ${data.link}</p>
 							<p>no citações: ${data.citations}</p>
-							<p>palavras chaves: ${data.keyWords}</p>
+							<p>palavra chave 1: ${data.keyWords[0]}</p>
+							<p>palavra chave 2: ${data.keyWords[1]}</p>
+							<p>palavra chave 3: ${data.keyWords[2]}</p>
 						</li>
-					)
+					`)
 				})}  
 			</ul>
 		`
 		
-		res.status(200).send(htmlContent);
+		res.status(200).send({ htmlContent });
 		
 	} catch (error) {
 		console.log('error = ', error);

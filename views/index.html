@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scholar Fetcher | Rural</title>
   <link rel="stylesheet" href="style.css">
-  <base href="../">
 </head>
 <body>
   <main>
-      <h1>Scholar Fetcher  Rural</h1>
-      <div class="center_div" >
-        <img src="../assets/logo.png" width="200px" alt="">
-        <p> Abaixo na <i>Query de busca </i> digite sua pesquisa de artigos científicos ao lado em <i>Quantidade de resultados</i>
-          Digite o número de artigos que quer receber dessa busca. Será processada e retornará um pdf com os artigos relacionado a query digitada e suas 
-          respectivas datas de criação.  
-        </p>
-      </div> 
+    <h1>Scholar Fetcher  Rural</h1>
+    <div class="center_div" >
+      <img src="../assets/logo.png" width="200px" alt="">
+      <p> Abaixo na <i>Query de busca </i> digite sua pesquisa de artigos científicos ao lado em <i>Quantidade de resultados</i>
+        Digite o número de artigos que quer receber dessa busca. Será processada e retornará um pdf com os artigos relacionado a query digitada e suas 
+        respectivas datas de criação.  
+      </p>
+    </div> 
 
-      <div class="inputs" >
-        <input required placeholder="Query de busca" type="text" name="" id="query_text">
-      </div>
-      <button id="submit_button">realizar pesquisa</button>
+    <div class="inputs" >
+      <input required placeholder="Query de busca" type="text" name="" id="query_text">
+    </div>
+    <button id="submit_button">realizar pesquisa</button>
+
+    <div id="results" style="display: flex; flex-direction: column;">
+    </div>
 
     <div class="about">
       <h3>Sobre Nós</h3>
@@ -30,15 +32,7 @@
       </p>
     </div>
   </main>
-  <!-- <script>
 
-  const query = document.getElementById("query_text");
-  query.addEventListener("change", ()=> {
-  // handleSearch(query)
-  console.log(query.value);
-})
-  </script> -->
-
-<script type="module" src="../handleSearch.js" ></script>
+<script type="text/javascript" src="../handleSearch.js" ></script>
 </body>
 </html>

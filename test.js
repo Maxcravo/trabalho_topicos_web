@@ -67,7 +67,7 @@ async function testScholar() {
 
 	const scholarResponse = await fetch(`${scholarBaseURL}/search`, {
 		method: 'POST',
-		body: JSON.stringify({ query: query, numberOfResults: 20 }),
+		body: JSON.stringify({ query: query }),
 		headers: hds
 	}).then((res) => {
 		return res.json();
