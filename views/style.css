@@ -53,3 +53,20 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* TODO: CRIAR ESTILO PRO RESULTADO (div, ul, li, e p) */
+
+#results {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#results ul, li {
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  color: #77a1f3;
+}

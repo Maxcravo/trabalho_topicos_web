@@ -11,12 +11,13 @@ async function runAI(prompt) {
 	return response.text();
 } 
 
+let messagesCounter = 0;
+
 async function treatData(messageValue) {
 	try {
 		console.log(`treatData`);
-		console.log("messageValue: ", messageValue);
 		const result = JSON.parse(messageValue)
-		console.log("result: ", result);
+		// console.log("result: ", result);
 		
 		const formattedResult = {
 			title: result.title,
@@ -30,7 +31,8 @@ async function treatData(messageValue) {
 		const aiResponse = await runAI(getContentKeyWords);
 		
 		formattedResult.keyWords = JSON.parse(aiResponse);
-		console.log('formattedResult.keyWords[0]: ', formattedResult.keyWords[0]);
+
+		messagesCounter += 1;
 	
 		return formattedResult;
 		
@@ -56,22 +58,24 @@ exports.consumeMessages = async (req, res) => {
 		const kafkaConsumer = newKafkaConsumer(consumerGroup);
 
 		await kafkaConsumer.connect();
-		console.log(`consumer subscribe`);
+
 		await kafkaConsumer.subscribe({ topics: topics, fromBeginning: true })
-		console.log(`consumer run`);
+
 		await kafkaConsumer.run({
 			eachMessage: async ({ topic, partition, message, heartbeat, pause }) => {
-				// console.log(`messageValue: `, message.value.toString());
 				const treated = await treatData(message.value.toString());
 				treatedData.push(treated);
-				},
+			},
 		})
 
 		function delay(time) {
 			return new Promise(resolve => setTimeout(resolve, time));
 		}
-		
-		await delay(5000)
+
+		while (messagesCounter < 20) {
+			console.log('messagesCounter: ', messagesCounter);
+			await delay(1000)
+		}
 
 		await kafkaConsumer.disconnect();
 
@@ -80,12 +84,10 @@ exports.consumeMessages = async (req, res) => {
 				${treatedData.map((data)=>{
 					return (`
 						<li style="display:flex; flex-direction: collumn" >
-							<h1>Titulo: ${data.title} </h1>
-							<p>link: ${data.link}</p>
-							<p>no citações: ${data.citations}</p>
-							<p>palavra chave 1: ${data.keyWords[0]}</p>
-							<p>palavra chave 2: ${data.keyWords[1]}</p>
-							<p>palavra chave 3: ${data.keyWords[2]}</p>
+							<h3><b>Titulo: </b> ${data.title} </h3>
+							<p><b>Link:</b> <a href="${data.link}"> ${data.link} </a></p>
+							<p><b>Número de citações: </b> ${data.citations}</p>
+							<p><b>Palavras chave:</b> ${data.keyWords[0]},${data.keyWords[1]}, ${data.keyWords[2]} </p>
 						</li>
 					`)
 				})}  
