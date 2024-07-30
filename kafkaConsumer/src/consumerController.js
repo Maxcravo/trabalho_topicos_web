@@ -1,12 +1,34 @@
 const { newKafkaConsumer } = require('./kafkaClientConfig');
 
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const gemApiKey = process.env.GEMAPI_KEY;
+const genAI = new GoogleGenerativeAI(gemApiKey);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+async function runAI(prompt) {
+	const result = await model.generateContent(prompt);
+	const response = await result.response;
+	return response.text();
+} 
+
 async function treatData(data) {
 	try {
 		console.log(`treatData`);
-		// TODO: tratar os dados
+		const formattedResult = {
+			title: data.value.title,
+			link: data.value.link,
+			citations: data.value.inline_link.cited_by.total ? data.value.inline_link.cited_by.total : 0,
+			keyWords: []
+		}
 
+		const getContentKeyWords = `Gere três palavras-chave com base nesses dois textos: "${data.value.title}" e "${data.value.snippet}. Retorne no formato ["palavra1", "palavra2", "palavra3"].`
+
+		const aiResponse = runAI(getContentKeyWords);
+		console.log('aiResponse: ', aiResponse);
+
+		formattedResult.keyWords = aiResponse;
 	
-		return data;
+		return formattedResult;
 		
 	} catch (error) {
 		throw error;
@@ -54,50 +76,19 @@ exports.consumeMessages = async (req, res) => {
 				${treatedData.map((data)=>{
 					return (
 						<li style="display:flex; flex-direction: collumn" >
-							<h1>Titulo:${data.title} </h1>
-							<p>link:${data.link}</p>
-							<p>no citações${data.citations}</p>
-							<p>palavras chaves:${data.keyWords}</p>
+							<h1>Titulo: ${data.title} </h1>
+							<p>link: ${data.link}</p>
+							<p>no citações: ${data.citations}</p>
+							<p>palavras chaves: ${data.keyWords}</p>
 						</li>
 					)
 				})}  
 			</ul>
 		`
 		
-		res.status(200).send(
-
-			// treatedData: treatedData
-		);
-
-
-		/*
-					const htmlContent = `
-				<ul>
-			${}
-		`
-
-			<ul style={{ display: flex }}>
-				{
-					treatedData.map((result) => {
-						return(
-							<li> dhauhdua </li>	
-						)
-					})
-				}
-			</ul>
-		*/
-
+		res.status(200).send(htmlContent);
 		
 	} catch (error) {
 		console.log('error = ', error);
 	}
-}
-
-exports.consumeMessages_V2 = async(req, res) => {
-	/* implementar uma logica para impedir a deconexão do consumer. Ideia:
-		criar uma variável que indica o status do percorrer de mensagens, e só desconectar o consumer quando essa variável for true.
-		em vez de tratar os dados dentro do eachMessage, apenas dar push num novo array de mensagens e tratar esse array, pois assim conseguimos saber qual a ultima mensagem a ser percorrida e indicar na variável tornando ela TRUE.
-	*/
-
-	res.status(200).send('não implementado');
 }

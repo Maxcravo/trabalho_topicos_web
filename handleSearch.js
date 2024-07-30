@@ -24,8 +24,12 @@ async function handleSearch({ query, numberOfResults = 10 }) {
 
     console.log('[handleSearch] query: ', query);
 
+    const hds = new Headers({
+      'Content-type': 'application/json; charset=UTF-8',
+    })
+
     // acessar o serviço do scholar para fazer uma busca
-    const queryResults = await fetch(`${scholarBaseURL}/search`, {
+    const scholarResponse = await fetch(`${scholarBaseURL}/search`, {
       method: 'POST',
       body: JSON.stringify(query),
       headers: hds
@@ -33,17 +37,17 @@ async function handleSearch({ query, numberOfResults = 10 }) {
       return res.json();
     });
 
-    console.log('[handleSearch] queryResults: ', queryResults);
+    console.log('[handleSearch] scholarResponse: ', scholarResponse);
 
     // criando o nome do tópico com base na busca do usuário
     const topicName = createTopicName(query);
 
-    console.log('[handleSearch] producerPayload: ', { topic: topicName, data: queryResults });
+    console.log('[handleSearch] producerPayload: ', { topic: topicName, data: scholarResponse.result });
     
     // inserir os dados sem tratamento na fila do kafka através do Producer
     const producerRes = await fetch(`${producerBaseURL}/produce-messages`, {
       method: 'POST',
-      body: JSON.stringify({ topic: topicName, data: queryResults }),
+      body: JSON.stringify({ topic: topicName, data: scholarResponse.result }),
       headers: hds
     }).then((res) => {
       return res.json();
@@ -59,10 +63,7 @@ async function handleSearch({ query, numberOfResults = 10 }) {
       method: 'POST',
       body: JSON.stringify({ topic: topicName }),
       headers: hds
-    }).then((res) => {
-      return res.json();
-    });
-    // todo: ver se aqui tem que retornar o res.json pq vai retornar o html
+    }) // todo: ver se aqui tem que retornar o res.json pq vai retornar o html
     
   } catch (error) {
     alert(error);

@@ -1,5 +1,3 @@
-const query = 'Inteligência Artificial';
-
 function formatTopicName(srcString) {
 	const clean = srcString.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9 ]/g, '');
 	const formatted = clean.trim().replace(/\s\s+/g, ' ').replace(/\s/g, '-').toLowerCase();
@@ -29,7 +27,6 @@ function filterStopwords(srcTokens) {
 function filterData(data, topicName) {
 	try {
 		console.log(`[filterData]`);
-		console.log('topicName: ', topicName);
 	
 		const topicTokens = topicName.replace(/[-]/g, ' ').split(' ');
 		console.log('topicTokens: ', topicTokens);
@@ -81,15 +78,20 @@ async function testScholar() {
 	// formatar os dados em forma de mensagem kafka
 	const messages = scholarResponse.result.map((result, index) => {
 		return {
-			key: index, // Todo: ver se precisa ser string
+			key: index.toString(),
 			value: result
 		}
 	});
 
-	console.log('messages: ', messages)
-	console.log('messages[0].value.snippet: ', messages[0].value.snippet)
-	// console.log('messages[5].value.inline_links: ', messages[5].value.inline_links)
+	// console.log('messages: ', messages)
+	console.log('messages[5].value.publication_info: ', messages[5].value.publication_info)
+	console.log('messages[5].value.inline_links: ', messages[5].value.inline_links)
 
+	console.log('messages[4].value.publication_info: ', messages[4].value.publication_info)
+	console.log('messages[4].value.inline_links: ', messages[4].value.inline_links)
+
+	console.log('messages[8].value.publication_info: ', messages[8].value.publication_info)
+	console.log('messages[8].value.inline_links: ', messages[8].value.inline_links)
 	// const treatedData = filterData(messages, topic);
 	// console.log('treatedData: ', treatedData)
 }
