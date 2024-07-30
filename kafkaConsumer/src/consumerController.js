@@ -48,10 +48,27 @@ exports.consumeMessages = async (req, res) => {
 		await delay(5000)
 
 		await kafkaConsumer.disconnect();
+
+		const htmlContent = `
+			<ul style="display:flex; flex-direction: collumn"> 
+				${treatedData.map((data)=>{
+					return (
+						<li style="display:flex; flex-direction: collumn" >
+							<h1>Titulo:${data.title} </h1>
+							<p>link:${data.link}</p>
+							<p>no citações${data.citations}</p>
+							<p>palavras chaves:${data.keyWords}</p>
+						</li>
+					)
+				})}  
+			</ul>
+		`
 		
-		res.status(200).send({
-			treatedData: treatedData
-		})
+		res.status(200).send(
+
+			// treatedData: treatedData
+		);
+
 
 		/*
 					const htmlContent = `
