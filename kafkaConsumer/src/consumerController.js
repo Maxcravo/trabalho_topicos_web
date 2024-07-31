@@ -9,16 +9,16 @@ async function runAI(prompt) {
 	const result = await model.generateContent(prompt);
 	const response = await result.response;
 	return response.text();
-} 
+}
 
+let treatedData = [];
 let messagesCounter = 0;
 
 async function treatData(messageValue) {
 	try {
-		console.log(`treatData`);
+		console.log(`[treatData]`);
 		const result = JSON.parse(messageValue)
-		// console.log("result: ", result);
-		
+
 		const formattedResult = {
 			title: result.title,
 			link: result.link,
@@ -29,13 +29,11 @@ async function treatData(messageValue) {
 		const getContentKeyWords = `Gere três palavras-chave em Português-BR com base nesses dois textos: "${result.title}" e "${result.snippet}. Retorne no formato ["palavra1", "palavra2", "palavra3"].`
 
 		const aiResponse = await runAI(getContentKeyWords);
-		
+
 		formattedResult.keyWords = JSON.parse(aiResponse);
 
-		messagesCounter += 1;
-	
 		return formattedResult;
-		
+
 	} catch (error) {
 		throw error;
 	}
@@ -45,13 +43,17 @@ exports.consumeMessages = async (req, res) => {
 	console.log('[KafkaConsumer] [consumeMessages]');
 
 	try {
+		treatedData = [];
+		messagesCounter = 0;
+		const start = new Date(Date.now())
+		console.log('[KafkaConsumer] start: ', start);
+
+
 		const { topics, groupId } = req.body;
 
 		if (!topics || topics.length === 0) {
-			throw new Error('topics vazio')
+			throw new Error('topics vazio');
 		}
-
-		const treatedData = [];
 
 		const consumerGroup = groupId ? groupId : 'default';
 
@@ -62,9 +64,10 @@ exports.consumeMessages = async (req, res) => {
 		await kafkaConsumer.subscribe({ topics: topics, fromBeginning: true })
 
 		await kafkaConsumer.run({
-			eachMessage: async ({ topic, partition, message, heartbeat, pause }) => {
+			eachMessage: async ({ message }) => {
 				const treated = await treatData(message.value.toString());
 				treatedData.push(treated);
+				messagesCounter += 1;
 			},
 		})
 
@@ -72,16 +75,19 @@ exports.consumeMessages = async (req, res) => {
 			return new Promise(resolve => setTimeout(resolve, time));
 		}
 
-		while (messagesCounter < 20) {
+		while (messagesCounter < 10 ) {
 			console.log('messagesCounter: ', messagesCounter);
-			await delay(1000)
+			if (Date.now() - start < 15000) {
+				console.log('wait');
+				await delay(1000)
+			}
 		}
 
 		await kafkaConsumer.disconnect();
 
 		const htmlContent = `
 			<ul style="display:flex; flex-direction: collumn"> 
-				${treatedData.map((data)=>{
+				${treatedData.map((data) => {
 					return (`
 						<li style="display:flex; flex-direction: collumn" >
 							<h3><b>Titulo: </b> ${data.title} </h3>
@@ -90,12 +96,11 @@ exports.consumeMessages = async (req, res) => {
 							<p><b>Palavras chave:</b> ${data.keyWords[0]},${data.keyWords[1]}, ${data.keyWords[2]} </p>
 						</li>
 					`)
-				})}  
+				})}
 			</ul>
 		`
-		
 		res.status(200).send({ htmlContent });
-		
+
 	} catch (error) {
 		console.log('error = ', error);
 	}

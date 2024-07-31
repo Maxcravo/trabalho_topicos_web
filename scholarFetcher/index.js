@@ -6,7 +6,6 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-app.get("/", (req, res) => { res.send('aaaa')})
 app.post('/search', scholarControllers.fetchScholarAPI);
 
 app.listen(3001, () => console.log('Listening on http://localhost:3001'));

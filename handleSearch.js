@@ -65,7 +65,7 @@ async function handleSearch({ query }) {
         'Content-type': 'application/json; charset=UTF-8'
       }
     }).then((res) => {
-      console.log()
+      console.log('Status Resposta Consumer: ', res.status)
       return res.json();
     });
 
@@ -79,6 +79,8 @@ async function handleSearch({ query }) {
 }
 
 submit.addEventListener("click", ()=> {
+  const resultsDiv = document.getElementById("results")
+  resultsDiv.innerHTML = "<p>Carregando Resultados ...</p>"
   handleSearch({ query: query_text.value });
 })
 

@@ -1,0 +1,533 @@
+{
+  "search_metadata": {
+    "id": "66aa2b6ad5b1c57508200bd9",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/060e6c4a504db406/66aa2b6ad5b1c57508200bd9.json",
+    "created_at": "2024-07-31 12:17:46 UTC",
+    "processed_at": "2024-07-31 12:17:46 UTC",
+    "google_scholar_url": "https://scholar.google.com/scholar?q=arroz+&hl=en&num=10&filter=0&as_ylo=2014&as_vis=1",
+    "raw_html_file": "https://serpapi.com/searches/060e6c4a504db406/66aa2b6ad5b1c57508200bd9.html",
+    "total_time_taken": 0.64
+  },
+  "search_parameters": {
+    "engine": "google_scholar",
+    "q": "arroz ",
+    "hl": "en",
+    "num": "10",
+    "filter": "0",
+    "as_ylo": "2014",
+    "as_vis": "1"
+  },
+  "search_information": {
+    "organic_results_state": "Results for exact spelling",
+    "total_results": 108000,
+    "time_taken_displayed": 0.06,
+    "query_displayed": "arroz "
+  },
+  "organic_results": [
+    {
+      "position": 0,
+      "title": "El arroz",
+      "result_id": "QH_uKgtNx7cJ",
+      "type": "Book",
+      "link": "https://sedici.unlp.edu.ar/handle/10915/46744",
+      "snippet": "El arroz conforma, junto al maíz y al trigo, la trilogía de cereales más cultivados del mundo. Desde el punto de vista histórico, cultural y alimenticio tiene tanta importancia para Asia …",
+      "publication_info": {
+        "summary": "M Pinciroli, NR Ponzio, M Salsamendi - 2015 - sedici.unlp.edu.ar",
+        "authors": [
+          {
+            "name": "M Pinciroli",
+            "link": "https://scholar.google.com/citations?user=1S9aNkIAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=1S9aNkIAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "1S9aNkIAAAAJ"
+          }
+        ]
+      },
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=QH_uKgtNx7cJ",
+        "cited_by": {
+          "total": 37,
+          "link": "https://scholar.google.com/scholar?cites=13242637939666485056&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "13242637939666485056",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=13242637939666485056&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:QH_uKgtNx7cJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3AQH_uKgtNx7cJ%3Ascholar.google.com%2F",
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:QH_uKgtNx7cJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 1,
+      "title": "La cascarilla de arroz como una alternativa en procesos de descontaminación",
+      "result_id": "ashCztmM4F4J",
+      "type": "Html",
+      "link": "http://www.scielo.org.co/scielo.php?pid=S1909-04552016000200013&script=sci_arttext",
+      "snippet": "El desarrollo industrial trae consigo graves consecuencias para el ambiente y la salud, debido a la generación de desechos tóxicos como resultado de sus procesos; estos desechos …",
+      "publication_info": {
+        "summary": "O Llanos Páez, A Ríos Navarro… - Producción+ …, 2016 - scielo.org.co",
+        "authors": [
+          {
+            "name": "O Llanos Páez",
+            "link": "https://scholar.google.com/citations?user=XQ2L_YwAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=XQ2L_YwAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "XQ2L_YwAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "scielo.org.co",
+          "file_format": "HTML",
+          "link": "http://www.scielo.org.co/scielo.php?pid=S1909-04552016000200013&script=sci_arttext"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=ashCztmM4F4J",
+        "html_version": "http://www.scielo.org.co/scielo.php?pid=S1909-04552016000200013&script=sci_arttext",
+        "cited_by": {
+          "total": 38,
+          "link": "https://scholar.google.com/scholar?cites=6836619101444687978&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "6836619101444687978",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=6836619101444687978&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:ashCztmM4F4J:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3AashCztmM4F4J%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=6836619101444687978&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "6836619101444687978",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=6836619101444687978&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:ashCztmM4F4J:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 2,
+      "title": "Factores que inciden en la productividad del cultivo de arroz en la provincia Los Ríos",
+      "result_id": "qhq2VtvKUPkJ",
+      "type": "Html",
+      "link": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000500270&script=sci_arttext",
+      "snippet": "… de arroz de 4.25 … arroz es $28 y el nivel de rentabilidad del cultivo es bajo. El modelo de regresión lineal múltiple sobre el rendimiento de arroz explica el 60% de la producción de arroz …",
+      "publication_info": {
+        "summary": "CE Zambrano, MS Andrade Arias… - Revista Universidad y …, 2019 - scielo.sld.cu",
+        "authors": [
+          {
+            "name": "CE Zambrano",
+            "link": "https://scholar.google.com/citations?user=FtpIlVgAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FtpIlVgAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "FtpIlVgAAAAJ"
+          },
+          {
+            "name": "MS Andrade Arias",
+            "link": "https://scholar.google.com/citations?user=crwWb8gAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=crwWb8gAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "crwWb8gAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "sld.cu",
+          "file_format": "HTML",
+          "link": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000500270&script=sci_arttext"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=qhq2VtvKUPkJ",
+        "html_version": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000500270&script=sci_arttext",
+        "cited_by": {
+          "total": 65,
+          "link": "https://scholar.google.com/scholar?cites=17965081956982332074&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "17965081956982332074",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=17965081956982332074&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:qhq2VtvKUPkJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3Aqhq2VtvKUPkJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=17965081956982332074&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "17965081956982332074",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=17965081956982332074&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:qhq2VtvKUPkJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 3,
+      "title": "Tecnologías para ahorrar agua en el cultivo de arroz",
+      "result_id": "cZfEyuj6OpsJ",
+      "type": "Html",
+      "link": "http://www.scielo.org.co/scielo.php?pid=S1794-24702016000200007&script=sci_arttext",
+      "snippet": "… arroz aeróbico, se destaca el arroz bajo riego por aspersión. En la transición de arroz aeróbico a arroz … del cultivo del arroz (SICA), el sistema de producción de arroz con suelo cubierto …",
+      "publication_info": {
+        "summary": "M González, AM Alonso - Nova, 2016 - scielo.org.co",
+        "authors": [
+          {
+            "name": "M González",
+            "link": "https://scholar.google.com/citations?user=WocpN1oAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=WocpN1oAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "WocpN1oAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "scielo.org.co",
+          "file_format": "HTML",
+          "link": "http://www.scielo.org.co/scielo.php?pid=S1794-24702016000200007&script=sci_arttext"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=cZfEyuj6OpsJ",
+        "html_version": "http://www.scielo.org.co/scielo.php?pid=S1794-24702016000200007&script=sci_arttext",
+        "cited_by": {
+          "total": 31,
+          "link": "https://scholar.google.com/scholar?cites=11185528502269286257&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "11185528502269286257",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=11185528502269286257&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:cZfEyuj6OpsJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3AcZfEyuj6OpsJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 13,
+          "link": "https://scholar.google.com/scholar?cluster=11185528502269286257&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "11185528502269286257",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=11185528502269286257&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:cZfEyuj6OpsJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 4,
+      "title": "Indicadores de competitividad del cultivo del arroz en Colombia y Estados Unidos",
+      "result_id": "waLByew8jzsJ",
+      "type": "Html",
+      "link": "http://www.scielo.org.co/scielo.php?pid=S0120-01352016000200002&script=sci_arttext",
+      "snippet": "… El arroz, es el tercer cultivo en importancia del país y fue incluido como producto de … de los precios internacionales influye negativamente en la disponibilidad y acceso al arroz. …",
+      "publication_info": {
+        "summary": "J Chica, YC Tirado, JM Barreto - Revista de Ciencias Agrícolas, 2016 - scielo.org.co",
+        "authors": [
+          {
+            "name": "J Chica",
+            "link": "https://scholar.google.com/citations?user=Ew2Q5RYAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Ew2Q5RYAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "Ew2Q5RYAAAAJ"
+          },
+          {
+            "name": "JM Barreto",
+            "link": "https://scholar.google.com/citations?user=fEmKg70AAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=fEmKg70AAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "fEmKg70AAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "scielo.org.co",
+          "file_format": "HTML",
+          "link": "http://www.scielo.org.co/scielo.php?pid=S0120-01352016000200002&script=sci_arttext"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=waLByew8jzsJ",
+        "html_version": "http://www.scielo.org.co/scielo.php?pid=S0120-01352016000200002&script=sci_arttext",
+        "cited_by": {
+          "total": 76,
+          "link": "https://scholar.google.com/scholar?cites=4291715957602230977&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "4291715957602230977",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=4291715957602230977&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:waLByew8jzsJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3AwaLByew8jzsJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 10,
+          "link": "https://scholar.google.com/scholar?cluster=4291715957602230977&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "4291715957602230977",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=4291715957602230977&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:waLByew8jzsJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 5,
+      "title": "Perfil del mercado de arroz",
+      "result_id": "zr5pMeYfL9IJ",
+      "type": "Pdf",
+      "link": "https://magyp.gob.ar/sitio/areas/ss_mercados_agropecuarios/areas/regionales/_archivos/000030_Informes/000020_Arroz/000021_Perfil%20del%20Arroz%20-%202017.pdf",
+      "snippet": "Las bondades nutricionales del arroz han trascendido por su importancia, dado que esta gramínea es la que mayor aporte calórico brinda de todos los cereales. El almidón es el …",
+      "publication_info": {
+        "summary": "L De Bernardi - Recuperado el, 2017 - magyp.gob.ar"
+      },
+      "resources": [
+        {
+          "title": "magyp.gob.ar",
+          "file_format": "PDF",
+          "link": "https://magyp.gob.ar/sitio/areas/ss_mercados_agropecuarios/areas/regionales/_archivos/000030_Informes/000020_Arroz/000021_Perfil%20del%20Arroz%20-%202017.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=zr5pMeYfL9IJ",
+        "cited_by": {
+          "total": 22,
+          "link": "https://scholar.google.com/scholar?cites=15145359145402220238&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "15145359145402220238",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=15145359145402220238&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:zr5pMeYfL9IJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3Azr5pMeYfL9IJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 5,
+          "link": "https://scholar.google.com/scholar?cluster=15145359145402220238&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "15145359145402220238",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=15145359145402220238&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:zr5pMeYfL9IJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 6,
+      "title": "Comercialización de arroz en Ecuador: Análisis de la evolución de precios en el eslabón productor-consumidor",
+      "result_id": "wh1zTIZ0QOsJ",
+      "link": "https://dialnet.unirioja.es/servlet/articulo?codigo=6261797",
+      "snippet": "… de precios de arroz en … de arroz en cáscara en promedio fue de USD 0.23 kg-1, con un rango entre USD 0.12 y USD 0.35 kg-1, mientras que la variable precios por kilogramo de arroz …",
+      "publication_info": {
+        "summary": "GIV Viteri, CE Zambrano - Revista Ciencia y Tecnología, 2016 - dialnet.unirioja.es",
+        "authors": [
+          {
+            "name": "GIV Viteri",
+            "link": "https://scholar.google.com/citations?user=VMYlklAAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=VMYlklAAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "VMYlklAAAAAJ"
+          },
+          {
+            "name": "CE Zambrano",
+            "link": "https://scholar.google.com/citations?user=FtpIlVgAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=FtpIlVgAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "FtpIlVgAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "unirioja.es",
+          "file_format": "PDF",
+          "link": "https://dialnet.unirioja.es/descarga/articulo/6261797.pdf"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=wh1zTIZ0QOsJ",
+        "cited_by": {
+          "total": 61,
+          "link": "https://scholar.google.com/scholar?cites=16951677117579599298&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "16951677117579599298",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=16951677117579599298&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:wh1zTIZ0QOsJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3Awh1zTIZ0QOsJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 7,
+          "link": "https://scholar.google.com/scholar?cluster=16951677117579599298&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "16951677117579599298",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=16951677117579599298&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "https://scholar.googleusercontent.com/scholar?q=cache:wh1zTIZ0QOsJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 7,
+      "title": "Concreto hidráulico modificado con sílice obtenida de la cascarilla del arroz",
+      "result_id": "M9g0n7YG2-sJ",
+      "type": "Html",
+      "link": "http://www.scielo.org.co/scielo.php?pid=s0124-81702017000100006&script=sci_arttext",
+      "snippet": "El cemento es una de las materias primas en la producción del concreto hidráulico, pero su producción es considerada como uno de los procesos más contaminantes en nuestro …",
+      "publication_info": {
+        "summary": "NR Camargo Pérez… - Ciencia e Ingeniería …, 2017 - scielo.org.co"
+      },
+      "resources": [
+        {
+          "title": "scielo.org.co",
+          "file_format": "HTML",
+          "link": "http://www.scielo.org.co/scielo.php?pid=s0124-81702017000100006&script=sci_arttext"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=M9g0n7YG2-sJ",
+        "html_version": "http://www.scielo.org.co/scielo.php?pid=s0124-81702017000100006&script=sci_arttext",
+        "cited_by": {
+          "total": 54,
+          "link": "https://scholar.google.com/scholar?cites=16995185000237553715&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "16995185000237553715",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=16995185000237553715&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:M9g0n7YG2-sJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3AM9g0n7YG2-sJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 11,
+          "link": "https://scholar.google.com/scholar?cluster=16995185000237553715&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "16995185000237553715",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=16995185000237553715&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:M9g0n7YG2-sJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 8,
+      "title": "El arroz y su importancia en los emprendimientos rurales de la agroindustria como mecanismo de desarrollo local de samborondón",
+      "result_id": "PtRqL5ev9bAJ",
+      "type": "Html",
+      "link": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000100324&script=sci_arttext&tlng=en",
+      "snippet": "… los países, uno de esos recursos es el arroz (Oriza sativa) pero pese al … Se estudió la incidencia de la producción de arroz en el … de producir subproductos elaborados a partir del arroz. …",
+      "publication_info": {
+        "summary": "HE Mendoza Avilés, ÁC Loor Bruno… - Revista universidad y …, 2019 - scielo.sld.cu",
+        "authors": [
+          {
+            "name": "HE Mendoza Avilés",
+            "link": "https://scholar.google.com/citations?user=Qzcn-90AAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=Qzcn-90AAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "Qzcn-90AAAAJ"
+          },
+          {
+            "name": "ÁC Loor Bruno",
+            "link": "https://scholar.google.com/citations?user=E3teq4gAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=E3teq4gAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "E3teq4gAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "sld.cu",
+          "file_format": "HTML",
+          "link": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000100324&script=sci_arttext&tlng=en"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=PtRqL5ev9bAJ",
+        "html_version": "http://scielo.sld.cu/scielo.php?pid=S2218-36202019000100324&script=sci_arttext&tlng=en",
+        "cited_by": {
+          "total": 45,
+          "link": "https://scholar.google.com/scholar?cites=12751290983839880254&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "12751290983839880254",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=12751290983839880254&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:PtRqL5ev9bAJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3APtRqL5ev9bAJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 4,
+          "link": "https://scholar.google.com/scholar?cluster=12751290983839880254&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "12751290983839880254",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=12751290983839880254&engine=google_scholar&hl=en"
+        },
+        "cached_page_link": "http://scholar.googleusercontent.com/scholar?q=cache:PtRqL5ev9bAJ:scholar.google.com/+arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+      }
+    },
+    {
+      "position": 9,
+      "title": "El nuevo sistema de siembra en seco del arroz",
+      "result_id": "2xMzavLGFpkJ",
+      "type": "Book",
+      "link": "https://books.google.com/books?hl=en&lr=&id=lM9MDwAAQBAJ&oi=fnd&pg=PA5&dq=arroz+&ots=L4VBgD36rC&sig=U6mNwMLkpFBvsv_LuoHC_u1ODGc",
+      "snippet": "… -Grano: el grano de arroz es el ovario … arroz “paddy”; el grano descascarado de arroz (cariópside), con el pericarpio de color pardusco, se conoce como arroz-café; el grano de arroz sin …",
+      "publication_info": {
+        "summary": "JMF Bernis - 2018 - books.google.com",
+        "authors": [
+          {
+            "name": "JMF Bernis",
+            "link": "https://scholar.google.com/citations?user=W9arXZQAAAAJ&hl=en&oi=sra",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=W9arXZQAAAAJ&engine=google_scholar_author&hl=en",
+            "author_id": "W9arXZQAAAAJ"
+          }
+        ]
+      },
+      "resources": [
+        {
+          "title": "uned.es",
+          "file_format": "PDF",
+          "link": "https://e-spacio.uned.es/bitstreams/8ee66eee-5a4f-4d70-ad28-329f90052bca/download"
+        }
+      ],
+      "inline_links": {
+        "serpapi_cite_link": "https://serpapi.com/search.json?engine=google_scholar_cite&hl=en&q=2xMzavLGFpkJ",
+        "cited_by": {
+          "total": 28,
+          "link": "https://scholar.google.com/scholar?cites=11031223081756726235&as_sdt=5,47&sciodt=0,47&hl=en",
+          "cites_id": "11031223081756726235",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=5%2C47&cites=11031223081756726235&engine=google_scholar&hl=en"
+        },
+        "related_pages_link": "https://scholar.google.com/scholar?q=related:2xMzavLGFpkJ:scholar.google.com/&scioq=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+        "serpapi_related_pages_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=related%3A2xMzavLGFpkJ%3Ascholar.google.com%2F",
+        "versions": {
+          "total": 6,
+          "link": "https://scholar.google.com/scholar?cluster=11031223081756726235&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+          "cluster_id": "11031223081756726235",
+          "serpapi_scholar_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&cluster=11031223081756726235&engine=google_scholar&hl=en"
+        }
+      }
+    }
+  ],
+  "related_searches": [
+    {
+      "query": "oryza sativa arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=1&q=oryza+sativa+arroz&qst=ib"
+    },
+    {
+      "query": "cultivo arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=2&q=cultivo+arroz&qst=ib"
+    },
+    {
+      "query": "cascarilla arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=3&q=cascarilla+arroz&qst=ib"
+    },
+    {
+      "query": "variedades arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=4&q=variedades+arroz&qst=ib"
+    },
+    {
+      "query": "harina arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=5&q=harina+arroz&qst=ib"
+    },
+    {
+      "query": "arroz evaluación",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=6&q=arroz+evaluaci%C3%B3n&qst=ib"
+    },
+    {
+      "query": "producción arroz",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=7&q=producci%C3%B3n+arroz&qst=ib"
+    },
+    {
+      "query": "arroz efecto",
+      "link": "https://scholar.google.com/scholar?hl=en&as_sdt=0,47&as_vis=1&qsp=8&q=arroz+efecto&qst=ib"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://scholar.google.com/scholar?start=10&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+    "other_pages": {
+      "2": "https://scholar.google.com/scholar?start=10&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "3": "https://scholar.google.com/scholar?start=20&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "4": "https://scholar.google.com/scholar?start=30&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "5": "https://scholar.google.com/scholar?start=40&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "6": "https://scholar.google.com/scholar?start=50&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "7": "https://scholar.google.com/scholar?start=60&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "8": "https://scholar.google.com/scholar?start=70&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "9": "https://scholar.google.com/scholar?start=80&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1",
+      "10": "https://scholar.google.com/scholar?start=90&q=arroz+&hl=en&as_sdt=0,47&as_ylo=2014&as_vis=1"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=10",
+    "next": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=10",
+      "3": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=20",
+      "4": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=30",
+      "5": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=40",
+      "6": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=50",
+      "7": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=60",
+      "8": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=70",
+      "9": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=80",
+      "10": "https://serpapi.com/search.json?as_sdt=0%2C47&as_vis=1&as_ylo=2014&engine=google_scholar&filter=0&hl=en&num=10&q=arroz+&start=90"
+    }
+  }
+}

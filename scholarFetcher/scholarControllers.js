@@ -1,29 +1,35 @@
-const path = require("path") 
+const path = require("path")
 
-require("dotenv").config({path: path.resolve(__dirname,"../.env")})
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") })
 
 const api_key = process.env.SERPAPI_KEY;
 
 const { getJson } = require("serpapi");
 
 fetchAPI = async (query) => {
-	console.log('fetch scholar api');
-	const requestObj = {
-		engine: "google_scholar",
-		q: query,
-		num: 20,
-		filter: 0, // Parameter defines if the filters for 'Similar Results' and 'Omitted Results' are on or off.It can be set to 1(default ) to enable these filters, or 0 to disable these filters.
-		as_vis: 1, // exclude citations,
-		as_ylo: 2014,
-		api_key
+	try {
+		console.log('fetch scholar api');
+		const requestObj = {
+			engine: "google_scholar",
+			q: query,
+			num: 10,
+			filter: 0, // Parameter defines if the filters for 'Similar Results' and 'Omitted Results' are on or off.It can be set to 1(default ) to enable these filters, or 0 to disable these filters.
+			as_vis: 1, // exclude citations,
+			as_ylo: 2014,
+			api_key
+		}
+
+		const fetchResults = [];
+		await getJson(requestObj, (json) => {
+			json["organic_results"].forEach(r => fetchResults.push(r));
+		})
+
+
+		return fetchResults
+	} catch (error) {
+		console.log('error = ', error);
+		throw error
 	}
-
-	const fetchResults = [];
-	await getJson(requestObj, (json) => {
-		json["organic_results"].forEach(r => fetchResults.push(r));
-	})
-
-	return fetchResults
 }
 
 exports.fetchScholarAPI = async (req, res) => {
@@ -32,7 +38,7 @@ exports.fetchScholarAPI = async (req, res) => {
 	try {
 		const { query } = req.body;
 
-		if(!query) {
+		if (!query) {
 			throw new Error('Query vazia');
 		}
 
@@ -44,7 +50,7 @@ exports.fetchScholarAPI = async (req, res) => {
 		})
 
 	} catch (error) {
-    console.log('error = ', error);
+		console.log('error = ', error);
 		throw error
 	}
 } 
